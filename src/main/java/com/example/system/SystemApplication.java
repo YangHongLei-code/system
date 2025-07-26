@@ -19,7 +19,7 @@ public class SystemApplication {
 
 		ConfigurableApplicationContext  context=SpringApplication.run(SystemApplication.class, args);
 		context.getBean(DefaultSecurityFilterChain.class);
-//git
+
 	}
 
 }
