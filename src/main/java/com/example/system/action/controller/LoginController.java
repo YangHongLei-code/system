@@ -20,7 +20,7 @@ import java.security.Principal;
 @RestController
 @CrossOrigin
 public class LoginController {
-
+    //获取验证码
     @RequestMapping("/captche")
     public void captche(HttpServletResponse response, HttpServletRequest request) throws IOException {
         response.setContentType("image/jpeg");
