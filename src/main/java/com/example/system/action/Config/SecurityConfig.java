@@ -68,7 +68,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http,CorsConfigurationSource corsConfigurationSource) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/captche").permitAll()
+                        .requestMatchers("/captcha").permitAll()
                         .anyRequest().authenticated() // 所有请求需认证
                 )
                 .formLogin((login)->

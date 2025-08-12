@@ -32,7 +32,7 @@ public class JwtCookieFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
 
         String requestURI = request.getRequestURI();
-        if("/login".equals(requestURI)){
+        if("/login".equals(requestURI) || "/captcha".equals(requestURI)){
             chain.doFilter(request, response);
         }else{
             String jwtToken=request.getHeader("jwtToken");
